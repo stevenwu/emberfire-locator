@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EmberfireGeolocator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/emberfire-geolocator.css">
+  </head>
+  <body>
+    <script>
+      window.EmberfireGeolocatorENV = {{ENV}};
+      window.EmberENV = window.EmberfireGeolocatorENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/emberfire-geolocator.js"></script>
+    <script>
+      window.EmberfireGeolocator = require('emberfire-geolocator/app')['default'].create(EmberfireGeolocatorENV.APP);
+    </script>
+  </body>
+</html>
